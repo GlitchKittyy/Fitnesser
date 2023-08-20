@@ -1,0 +1,44 @@
+#include <iostream>
+#include <string>
+
+void spam(bool showNum, bool newLine, int times, std::string input) {
+    while (times > 0) {
+        if (showNum) {
+            if (newLine) {
+                std::cout << times << ": " << input << "\n";
+            } else {
+                std::cout << times << ": " << input;
+            }
+        } else {
+            if (newLine) {
+                std::cout << input << "\n";
+            } else {
+                std::cout << input;
+            }
+        }
+        times--;
+    }
+}
+
+int main() {
+    bool showNum = false;
+    bool newLine = false;
+    int times;
+    std::string input;
+
+    std::cout << "Enter What To Spam: ";
+    std::getline(std::cin, input);
+
+    std::cout << "Enter How Many times: ";
+    std::cin >> times;
+
+    std::cout << "Enter Whether To Show Numbers (1 for true, 0 for false): ";
+    std::cin >> showNum;
+
+    std::cout << "Enter Whether To Show New Line (1 for true, 0 for false): ";
+    std::cin >> newLine;
+
+    spam(showNum, newLine, times, input);
+
+    return 0;
+}
