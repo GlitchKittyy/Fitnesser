@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylePlanner.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <script defer src="script.js"></script>
+    <title>Fitnesser - Planner</title>
+    <link rel="icon" href="img/logo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+
+</head>
+
+<body>
+    <p>Fitnesser by GlitchKittyy</p>
+    <h1 style="line-height: 0%;">Planner</h1>
+    <br><br>
+    <section id="choice" class="hidden">
+        <button onclick="showGenerator()">Genereer een workout planning</button>
+        <br>
+    </section>
+
+    
+    
+    <section id="checklist" style="display: none;" class="hidden">
+        <h2>Workout Checklist</h2>
+        <form id="workoutForm">
+            <label class="custom-checkbox">
+                <input type="checkbox" name="workout" value="Armen"> Armen
+            </label>
+            <label class="custom-checkbox">
+                <input type="checkbox" name="workout" value="Benen"> Benen
+            </label>
+            <label class="custom-checkbox">
+                <input type="checkbox" name="workout" value="Schouders"> Schouders
+            </label>
+            <label class="custom-checkbox">
+                <input type="checkbox" name="workout" value="Rug"> Rug
+            </label>
+            <label class="custom-checkbox">
+                <input type="checkbox" name="workout" value="Buik"> Buik
+            </label>
+            <label class="custom-checkbox">
+                <input type="checkbox" name="workout" value="Onderlichaam"> Onderlichaam
+            </label>
+        </form>
+        <br>
+        <div id="savedWorkouts">
+            <button onclick="generateSchedule()">Genereer Schema</button>
+            <br>
+        </div>
+    </section>
+    <section id="generator" style="display: none;">
+        <h2>Gegenereerd Schema</h2>
+        <p id="workout"></p>
+        <p>Fitnesser - GlitchKittyy</p>
+    </section>
+    <br>
+    <div class="downloader">
+        <button style="display: none;"id="download" onclick="capture()">Download as .JPEG</button>
+    </div>
+</body>
+<br><br><br><br><br><br>
+
+</html>
