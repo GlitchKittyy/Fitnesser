@@ -1,4 +1,5 @@
 var selectedWorkouts = [];
+let randomiser = false;
 
 document.addEventListener('DOMContentLoaded', function () {
     var form = document.getElementById('workoutForm');
@@ -6,14 +7,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
     for (var i = 0; i < checkboxes.length; i++) {
         checkboxes[i].addEventListener('change', updateWorkouts);
-        
     }
+
+    var developer1Checkbox = form.elements['developer1'];
+    developer1Checkbox.addEventListener('change', toggleRandomiser);
 
     updateWorkouts();
 
     var generateButton = document.getElementById('generateButton');
     generateButton.addEventListener('click', showGenerator);
 });
+
+function toggleRandomiser() {
+    randomiser = !randomiser;
+}
 
 function showGenerator() {
     var generatorElement = document.getElementById('generator');
@@ -35,21 +42,44 @@ function showGenerator() {
     var form = document.getElementById('workoutForm');
     var checkboxes = form.elements['workout'];
 
-    
-
     selectedWorkouts = Array.from(checkboxes).map(function (checkbox) {
         return checkbox.value;
     });
 
-    fillRemainingDaysWithRest();
+    var customRestDaysSection = document.getElementById('customRestDaysSection');
+    if (document.getElementById('developerRestDays').checked) {
+        customRestDaysSection.style.display = 'grid';
+        var customRestDaysCheckboxes = document.getElementsByName('restDay');
+        customRestDays = Array.from(customRestDaysCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => checkbox.value);
+
+        fillRemainingDaysWithCustomRest();
+    } else {
+        customRestDaysSection.style.display = 'none';
+        fillRemainingDaysWithRest();
+    }
 
     displaySavedWorkouts();
 }
 
 
+
 function updateWorkouts() {
-    var form = document.getElementById('workoutForm');
-    var checkboxes = form.elements['workout'];
+    var checkedCount = 0;
+    for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+            checkedCount++;
+        }
+    }
+
+    if (checkedCount > maxCheckboxes) {
+        checkboxLimitMessage.textContent = 'Max is 7';
+        this.checked = false;
+    } else {
+        checkboxLimitMessage.textContent = '';
+    }
+
     selectedWorkouts = [];
 
     for (var i = 0; i < checkboxes.length; i++) {
@@ -58,17 +88,32 @@ function updateWorkouts() {
         }
     }
 
-    fillRemainingDaysWithRest();
+    if (!randomiser) {
+        fillRemainingDaysWithRest();
+    }
 
     displaySavedWorkouts();
 }
 
 function fillRemainingDaysWithRest() {
     var remainingDays = 7 - selectedWorkouts.length;
-    for (var i = 0; i < remainingDays; i++) {
-        selectedWorkouts.push('Rustdag');
+
+    if (!randomiser) {
+        for (var i = 0; i < remainingDays; i++) {
+            selectedWorkouts.push('Rustdag');
+        }
+    } else {
+        var randomWorkouts = selectedWorkouts.slice();
+        while (randomWorkouts.length < 7) {
+            randomWorkouts = randomWorkouts.concat(randomWorkouts.slice(0, remainingDays));
+        }
+        selectedWorkouts = randomWorkouts.slice(0, 7);
     }
 }
+
+
+
+
 
 function displaySavedWorkouts() {
     var savedWorkoutsList = document.getElementById('savedWorkoutsList');
@@ -104,11 +149,16 @@ function generateSchedule() {
 }
 
 function shuffleArray(array) {
-    for (var i = array.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
+    if (!randomiser){
+        for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+    }
+    else{
+
     }
 }
 
@@ -138,3 +188,48 @@ function capture() {
             console.error('Error capturing image:', error);
         });
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('workoutForm');
+    var checkboxes = form.elements['workout'];
+    var maxCheckboxes = 7;
+    var checkboxLimitMessage = document.createElement('p');
+    checkboxLimitMessage.className = 'checkbox-limit-message';
+    form.appendChild(checkboxLimitMessage);
+
+    for (var i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].addEventListener('change', updateWorkouts);
+    }
+
+    function updateWorkouts() {
+        var checkedCount = 0;
+
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+                checkedCount++;
+            }
+        }
+
+        if (checkedCount > maxCheckboxes) {
+            checkboxLimitMessage.textContent = 'Maximaal 7 secties kunnen worden aangevinkt.';
+            this.checked = false;
+        } else {
+            checkboxLimitMessage.textContent = '';
+        }
+
+        selectedWorkouts = [];
+
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+                selectedWorkouts.push(checkboxes[i].value);
+            }
+        }
+
+        if(!randomiser){
+            fillRemainingDaysWithRest();
+        }
+        displaySavedWorkouts();
+    }
+
+
+});
