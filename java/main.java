@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
-public class main { // Corrected class name to follow Java naming conventions
-    private Scanner menuScanner; // Declare scanner as a class member
+public class main { 
+    private Scanner menuScanner;
 
     public main() {
-        menuScanner = new Scanner(System.in); // Initialize the scanner in the constructor
+        menuScanner = new Scanner(System.in); 
     }
 
     public void menu() {
@@ -15,13 +15,13 @@ public class main { // Corrected class name to follow Java naming conventions
         } else if (menuInput.equals("2")) {
             options();
         } else {
-            menuScanner.close(); // Close the scanner before exiting
+            menuScanner.close(); 
             System.exit(0);
         }
     }
 
     public void options() {
-        // Implement your options menu functionality here
+        
     }
 
     public void start() {
@@ -40,7 +40,7 @@ public class main { // Corrected class name to follow Java naming conventions
             correct += 1;
         }
 
-        answerScanner.close(); // Close the scanner for answers
+        answerScanner.close();
         double percentage = ((double) correct / answers.length ) * 100;
         System.out.println("Total Correct Answers: " + correct+"/"+answers.length+". You had "+percentage+"% correct");
     }

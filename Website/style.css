@@ -1,0 +1,122 @@
+body{
+    background-color: #0f0f0f;
+}
+h1{
+    margin-top: 15%;
+    color: #e3e3e3;
+    font-size: 2rem;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+h2{
+    color: #e3e3e3;
+    font-size: 1.5rem;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1%;
+}
+.github{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #e3e3e3;
+    font-family:'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.intro{
+    text-indent: 15%;
+}
+.space{
+    height: 10vh;
+}
+
+.about{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #0f0f0f;
+    font-family:'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #e3e3e3;
+    padding: 13px 17px;
+    border-radius: 20px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 14%;
+    margin-top: 1%;
+    
+}
+
+.abouttext {
+    display: flex;
+    font-size: 1.5rem;
+    color: #fff;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.abouttext div {
+    line-height: 1.5;
+    margin-left: 20%;
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+  
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+.fade-left {
+    animation: fade-left 1s ease;
+}
+
+@keyframes fade-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-bottom {
+    animation: fade-bottom 1s ease;
+}
+
+@keyframes fade-bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.social-button {
+    text-decoration: none;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 3vh;
+    color: white;
+    text-align: center;
+    display: block;
+    background-color: #1a1a1a;
+    padding: 15px 25px;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-bottom: 2vh;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .github {
+       font-size: 1.2rem;
+    }
+    .abouttext div {
+       margin-left: 10%;
+    }
+   }

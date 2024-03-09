@@ -7,5 +7,9 @@
 			"path": "../.codespaces"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "codespaces-blank",
+		"liveServer.settings.port": 5506,
+		"git.enabled": false
+	}
 }

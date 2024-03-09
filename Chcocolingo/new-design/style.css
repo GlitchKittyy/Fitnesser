@@ -1,0 +1,267 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+
+body {
+    background-color: #fff;
+    color: #131316;
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    line-height: 0;
+}
+
+h1 {
+    line-height: 0;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 50vh;
+    text-align: center;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.hidden2 {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(100%);
+    transition: opacity 1s ease-in-out, filter 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.hidden3 {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateY(100%);
+    transition: opacity 1s ease-in-out, filter 1s ease-in-out, transform 1s ease-in-out;
+}
+
+
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.hidden2 a {
+    opacity: 1;
+    transform: translateX(100%);
+}
+
+
+@media screen and (min-width: 600px) {
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+
+    
+}
+
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 30px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .demo{
+        display: inline-block;
+    }
+}
+.dark-mode {
+    background-color: #131316;
+    color: #ffffff;
+}
+
+.dark-mode .darkknop {
+    background-color: #131316;
+    color: #ffffff;
+}
+
+.darkknop {
+    font-size: 1.2rem;
+    color: #0f0f0f;
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: transparent;
+    border-color: transparent;
+    padding: 10px 20px;
+    border-radius: 15px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 1%;
+    
+}
+
+p span.word1 {
+    color: #ff6250;
+}
+
+p span.word2 {
+    color: #edbd53
+}
+
+p span.word3 {
+    color: #BD53ED;
+}
+
+
+
+.read {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #0f0f0f;
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #e3e3e3;
+    padding: 7.5px 15px;
+    border-radius: 15px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 1%;
+}
+
+.demo {
+    display: none;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #0f0f0f;
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #e3e3e3;
+    padding: 7.5px 15px;
+    border-radius: 15px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 1%;
+}
+
+.demo:disabled {
+    background-color: #7d7d7d;
+    cursor: not-allowed;
+} 
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.card {
+    position: relative;
+    max-width: 300px;
+    height: auto;
+    background: linear-gradient(-45deg, #fe0847, #feae3f);
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 40px 20px;
+}
+
+.col:nth-child(1) .card,
+.col:nth-child(1) .card .title .fa {
+    background: linear-gradient(-45deg, #64b5f6, #24df72);
+}
+
+.col:nth-child(2) .card,
+.col:nth-child(2) .card .title .fa {
+    background: linear-gradient(-45deg, #ffec61);
+
+}
+
+.col:nth-child(3) .card,
+.col:nth-child(3) .card .title .fa {
+    background: linear-gradient(-45deg ,#f321d7, #9a4eff);
+
+}
+
+
+.title .fa {
+    color: #fff;
+    font-size: 60px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
+
+}
+
+.title h2 {
+    position: relative;
+    margin: 20px 0 0;
+    padding: 0;
+    color: #fff;
+    font-size: 28px;
+    z-index: 2;
+}
+
+.price,
+.option {
+    position: relative;
+    z-index: 2;
+}
+
+.price h4 {
+    margin: 0;
+    padding: 20px 0;
+    color: #fff;
+    font-size: 60px;
+}
+
+.option ul {
+    margin: 0;
+    padding: 0;
+
+}
+
+.option ul li {
+    margin: 0 0 10px;
+    padding: 0;
+    list-style: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+    .row {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .card{
+        margin-bottom: 20px;
+    }
+    
+}

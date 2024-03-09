@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolingo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="card.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <script defer src="script.js"></script>
+
+
+</head>
+
+<body>
+    <button class="darkknop" onclick="mode()">&#9965;</button>
+    <section class="hidden2">
+        <h1>Chocolingo</h1>
+        <h3>6 Maart</h3>
+        <button class="read" onclick="scrollDown(400)">Lees meer</button>
+    </section>
+    <section class="hidden" style="transition-delay: 250ms;">
+        <h2>Over Ons</h1>
+            <p style="margin-left: 10%;margin-right: 10%;">Hallo, Chocolingo hier, wij zijn een klein bedrijf gericht op
+                het verkopen van chocolade met een
+                lingo invoeging erin. Wij verkopen aparte repen chocolade maar ook speltokens. Druk <span
+                    style="text-decoration: underline;" onclick="prijzen()">hier</span> om daar meer over te lezen.
+
+            </p>
+            <p>${video}</p>
+    </section>
+    <section class="hidden">
+        <h2>Test onze Lingo demo!</h1>
+            <div id="demoContainer">
+                <button onclick="redirectToDemo()" class="demo" id="demoButton">Probeer Demo</button>
+            </div>
+    </section>
+    
+    <section>
+        <div class="row">
+            <div class="col">
+                <div class="hidden">
+                <div class="card text-center">
+                    <div class="title">
+                        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                        <h2>Standaard</h2>
+                    </div>
+                    <div class="price">
+                        <h4><sup>€</sup>1,50</h4>
+                    </div>
+                    <div class="option">
+                        <ul>
+                            <li> <i class="fa fa-check" aria-hidden="true"></i> 1x Spelen </li>
+                            <li> <i class="fa fa-check" aria-hidden="true"></i> 1x Small Bar </li>
+                            <li> <i class="fa fa-check" aria-hidden="true"></i> Oplopend tot 1x Large Bar</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+                <div class="hidden">
+                <div class="card text-center">
+                    <div class="title">
+                        <i class="fa fa-plane" aria-hidden="true"></i>
+                        <h2>Premium</h2>
+                    </div>
+                    <div class="price">
+                        <h4><sup>€</sup>2,75</h4>
+                    </div>
+                    <div class="option">
+                        <ul>
+                            <li> <i class="fa fa-check" aria-hidden="true"></i> 2x Spelen </li>
+                            <li> <i class="fa fa-check" aria-hidden="true"></i> 1x Small Bar (per spel) </li>
+                            <li> <i class="fa fa-check" aria-hidden="true"></i> Oplopend tot 1x Large Bar (per spel)</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="hidden">
+                <div class="card text-center">
+                    <div class="title">
+                        <i class="fa fa-rocket" aria-hidden="true"></i>
+                        <h2>Deluxe</h2>
+                    </div>
+                    <div class="price">
+                        <h4><sup>€</sup>4,00</h4>
+                    </div>
+                    <div class="option">
+                        <ul>
+                            <li> <i class="fa fa-check" aria-hidden="true"></i> 3x Spelen </li>
+                            <li> <i class="fa fa-check" aria-hidden="true"></i> 1x Medium Bar (daarna Small)</li>
+                            <li> <i class="fa fa-check" aria-hidden="true"></i> Oplopend tot 1x Large Bar (per spel)</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolingo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="card.css">
+    <link rel="icon" type="image/x-icon" href="img/Favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <script defer src="script.js"></script>
+
+
+</head>
+
+<button class="darkknop" onclick="mode()">&#9965;</button>
+<body>
+    <section id="selecting">
+        <h2>Hoi! Welkom bij de kraam van ChocoLingo!</h1>
+        <br><br><br>
+        <button class="read" onclick="showWebsite()">Bekijk Website inclusief Video</button>
+        <br><br><br>
+        <button class="read" onclick="window.location.href = 'lingo.html'">Speel onze gratis demo!</button>
+        <br><br><br>
+        <button class="read" onclick="document.getElementById('prijzenDEMO').scrollIntoView({ behavior: 'smooth'})">Speel Lingo (vereist betaling)</button>
+        <br><br><br>
+        <h1>Prijzen</h1>
+        <h2>Speltokens</h3>
+        <br>
+        <div class="row" id="prijzenDEMO">
+            <div class="col">
+                <div class="hidden">
+                <div class="card text-center">
+                    <div class="title">
+                        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                        <h2>Standaard</h2>
+                    </div>
+                    <div class="price">
+                        <h4><sup>€</sup>1,50</h4>
+                    </div>
+                    <div class="option">
+                        <ul>
+                            <li> <i class="fa fa-check" aria-hidden="true"></i> 1x Spelen </li>
+                            <li> <i class="fa fa-check" aria-hidden="true"></i> 1x Small Bar </li>
+                            <li> <i class="fa fa-check" aria-hidden="true"></i> Oplopend tot 1x Large Bar</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+                <div class="hidden">
+                <div class="card text-center">
+                    <div class="title">
+                        <i class="fa fa-plane" aria-hidden="true"></i>
+                        <h2>Premium</h2>
+                    </div>
+                    <div class="price">
+                        <h4><sup>€</sup>2,75</h4>
+                    </div>
+                    <div class="option">
+                        <ul>
+                            <li> <i class="fa fa-check" aria-hidden="true"></i> 2x Spelen </li>
+                            <li> <i class="fa fa-check" aria-hidden="true"></i> 1x Small Bar (per spel) </li>
+                            <li> <i class="fa fa-check" aria-hidden="true"></i> Oplopend tot 1x Large Bar (per spel)</li>
+                            <li style="font-weight: 900;font-size: 25px;"> <i class="fa fa-check" aria-hidden="true"></i> Aanbevolen </li>
+                        </ul>
+                    </div>
+                </div> 
+                </div>
+            </div>
+            <div class="col">
+                <div class="hidden">
+                <div class="card text-center">
+                    <div class="title">
+                        <i class="fa fa-rocket" aria-hidden="true"></i>
+                        <h2>Deluxe</h2>
+                    </div>
+                    <div class="price">
+                        <h4><sup>€</sup>4,00</h4>
+                    </div>
+                    <div class="option">
+                        <ul>
+                            <li> <i class="fa fa-check" aria-hidden="true"></i> 3x Spelen </li>
+                            <li> <i class="fa fa-check" aria-hidden="true"></i> 1x Medium Bar (daarna Small)</li>
+                            <li> <i class="fa fa-check" aria-hidden="true"></i> Oplopend tot 1x Large Bar (per spel)</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <h3>Aparte Repen</h3>
+        <br>
+        <div class="row">
+            <div class="col">
+                <div class="hidden">
+                <div class="card text-center" style="background: linear-gradient(-45deg ,#ffd500, #ff8c00);padding: 25px 30px 25px 30px;">
+                    <div class="title">
+                        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                        <h2>Small</h2>
+                    </div>
+                    <div class="price">
+                        <h4><sup>€</sup>0,75</h4>
+                    </div>
+                    <div class="option">
+                        <ul>
+                            <li> <i class="fa fa-check" aria-hidden="true"></i> 1x Small Bar </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+                <div class="hidden">
+                <div class="card text-center" style="background: linear-gradient(-45deg ,#ff5000, #ff5757); padding: 25px 30px 45px 30px;">
+                    <div class="title">
+                        <i class="fa fa-plane" aria-hidden="true"></i>
+                        <h2>Medium</h2>
+                    </div>
+                    <div class="price">
+                        <h4><sup>€</sup>1,50</h4>
+                    </div>
+                    <div class="option">
+                        <ul>
+                            <li> <i class="fa fa-check" aria-hidden="true"></i> 1x Medium Bar </li>
+                            <li style="font-weight: 900;font-size: 25px;"> <i class="fa fa-check" aria-hidden="true"></i> Aanbevolen </li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="hidden">
+                <div class="card text-center" style="background: linear-gradient(-45deg, #ff0000, #ff8a8a); ; padding: 25px 30px 45px 30px;">
+                    <div class="title">
+                        <i class="fa fa-rocket" aria-hidden="true"></i>
+                        <h2>Large</h2>
+                    </div>
+                    <div class="price">
+                        <h4><sup>€</sup>2,50</h4> 
+                    </div>
+                    <div class="option">
+                        <ul>
+                            <li> <i class="fa fa-check" aria-hidden="true"></i> 1x Large Bar </li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <footer class="footer">
+            <p>- website: blokhuijsen.nl -</p>
+        </footer>
+    </section>
+    <section id="home">
+        <nav>
+            <ul>
+                <li onclick="scrollDown(0)">Home</li>
+                <li onclick="document.getElementById('over').scrollIntoView({ behavior: 'smooth' });">Over</li>
+                <li onclick="document.getElementById('ons').scrollIntoView({ behavior: 'smooth' });">Ons</li>
+                <li onclick="document.getElementById('second').scrollIntoView({ behavior: 'smooth' });">Producten</li>
+                <li onclick="document.getElementById('contactInfo').scrollIntoView({ behavior: 'smooth' });">Contact</li>
+            </ul>
+        </nav>
+        <section class="hidden2">
+            <img id="logoPic" src="img/logo.png" alt="logo">
+            <h2>Leuk dat je er bent!</h2>
+            <button class="read" onclick="scrollDown(400)">Lees meer over ons</button>
+        </section>
+        <br><br>
+        <section class="hidden" style="transition-delay: 250ms;" id="over">
+            <h2>Over Ons</h1>
+                <p style="margin-left: 10%;margin-right: 10%;">Hallo, Chocolingo hier, wij zijn een klein bedrijf gericht op
+                    het verkopen van chocolade met een
+                    lingo invoeging erin. Wij verkopen aparte repen chocolade maar ook speltokens. Druk <span
+                    style="text-decoration: underline;" onclick="document.getElementById('second').scrollIntoView({ behavior: 'smooth' });">hier</span> om daar meer over te lezen.
+                </p>
+                <iframe id="video" src="https://www.youtube.com/embed/Tw5wE7bZFw0?si=oxA5K3D341VJyn0h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
+        <br><br>
+        <section class="hidden">
+            <h1>Wie zijn wij?</h1>
+            <section id="ons" style="flex-direction: column; margin-left: 5%; margin-right: 5%;">
+                <section class="hidden" style="transition-delay: 100ms;">
+                    <img src="fotos/yanick.jpeg" style="height: 90px;border-radius: 10px;">
+                    <h2>Yanick</h2>
+                    <h3>Voorzitter</h3>
+                    <p>Yanick heeft de website INCL software voor het lingospel zelf gemaakt en heeft voornamelijk met de promotie campange gewerkt en de video geedit en met <span style="font-weight: bold;">Cas</span> de video gefilmt</p>
+                </section>
+                <section class="hidden" style="transition-delay: 100ms;">
+                    <img src="fotos/cas.jpeg" style="height: 90px;border-radius: 10px;">
+                    <h2>Cas</h2>
+                    <h3>Mede-Voorzitter</h3>
+                    <p>Cas heeft de hosting van de website gedaan en vooral met <span style="font-weight: bold;">Ference</span> de chocolade repen en prijzen gemaakt</p>
+                </section>
+                <section class="hidden" style="transition-delay: 100ms;">
+                    <img src="fotos/ference.jpeg" style="height: 90px; border-radius: 10px;">
+                    <h2>Ference</h2>
+                    <h3>Product Leider</h3>
+                    <p>Ference heeft de chocolade repen gemaakt met <span style="font-weight: bold;">Cas en Yanick</span> en de posters gemaakt</p>
+                </section>
+            </section>
+        </section>
+        <section class="hidden">
+            <h2>Test onze Lingo demo!</h1>
+                <div id="demoContainer">
+                    <button onclick="redirectToDemo()" class="demo" id="demoButton">Probeer Demo</button>
+                </div>
+        </section>
+        
+        <section class="hidden" id="second">
+            <h1>Prijzen</h1>
+            <h2>Speltokens</h3>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <div class="hidden">
+                    <div class="card text-center">
+                        <div class="title">
+                            <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                            <h2>Standaard</h2>
+                        </div>
+                        <div class="price">
+                            <h4><sup>€</sup>1,50</h4>
+                        </div>
+                        <div class="option">
+                            <ul>
+                                <li> <i class="fa fa-check" aria-hidden="true"></i> 1x Spelen </li>
+                                <li> <i class="fa fa-check" aria-hidden="true"></i> 1x Small Bar </li>
+                                <li> <i class="fa fa-check" aria-hidden="true"></i> Oplopend tot 1x Large Bar</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col">
+                    <div class="hidden">
+                    <div class="card text-center">
+                        <div class="title">
+                            <i class="fa fa-plane" aria-hidden="true"></i>
+                            <h2>Premium</h2>
+                        </div>
+                        <div class="price">
+                            <h4><sup>€</sup>2,75</h4>
+                        </div>
+                        <div class="option">
+                            <ul>
+                                <li> <i class="fa fa-check" aria-hidden="true"></i> 2x Spelen </li>
+                                <li> <i class="fa fa-check" aria-hidden="true"></i> 1x Small Bar (per spel) </li>
+                                <li> <i class="fa fa-check" aria-hidden="true"></i> Oplopend tot 1x Large Bar (per spel)</li>
+                                <li style="font-weight: 900;font-size: 25px;"> <i class="fa fa-check" aria-hidden="true"></i> Aanbevolen </li>
+                            </ul>
+                        </div>
+                    </div> 
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="hidden">
+                    <div class="card text-center">
+                        <div class="title">
+                            <i class="fa fa-rocket" aria-hidden="true"></i>
+                            <h2>Deluxe</h2>
+                        </div>
+                        <div class="price">
+                            <h4><sup>€</sup>4,00</h4>
+                        </div>
+                        <div class="option">
+                            <ul>
+                                <li> <i class="fa fa-check" aria-hidden="true"></i> 3x Spelen </li>
+                                <li> <i class="fa fa-check" aria-hidden="true"></i> 1x Medium Bar (daarna Small)</li>
+                                <li> <i class="fa fa-check" aria-hidden="true"></i> Oplopend tot 1x Large Bar (per spel)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="hidden" id="prijzenOp" style="width:100%;">
+            <br>
+            <h3>Aparte Repen</h3>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <div class="hidden">
+                    <div class="card text-center" style="background: linear-gradient(-45deg ,#ffd500, #ff8c00);padding: 25px 30px 25px 30px;">
+                        <div class="title">
+                            <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                            <h2>Small</h2>
+                        </div>
+                        <div class="price">
+                            <h4><sup>€</sup>0,75</h4>
+                        </div>
+                        <div class="option">
+                            <ul>
+                                <li> <i class="fa fa-check" aria-hidden="true"></i> 1x Small Bar </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col">
+                    <div class="hidden">
+                    <div class="card text-center" style="background: linear-gradient(-45deg ,#ff5000, #ff5757); padding: 25px 30px 45px 30px;">
+                        <div class="title">
+                            <i class="fa fa-plane" aria-hidden="true"></i>
+                            <h2>Medium</h2>
+                        </div>
+                        <div class="price">
+                            <h4><sup>€</sup>1,50</h4>
+                        </div>
+                        <div class="option">
+                            <ul>
+                                <li> <i class="fa fa-check" aria-hidden="true"></i> 1x Medium Bar </li>
+                                <li style="font-weight: 900;font-size: 25px;"> <i class="fa fa-check" aria-hidden="true"></i> Aanbevolen </li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="hidden">
+                    <div class="card text-center" style="background: linear-gradient(-45deg, #ff0000, #ff8a8a); ; padding: 25px 30px 45px 30px;">
+                        <div class="title">
+                            <i class="fa fa-rocket" aria-hidden="true"></i>
+                            <h2>Large</h2>
+                        </div>
+                        <div class="price">
+                            <h4><sup>€</sup>2,50</h4> 
+                        </div>
+                        <div class="option">
+                            <ul>
+                                <li> <i class="fa fa-check" aria-hidden="true"></i> 1x Large Bar </li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hidden2">
+            <h2>Hoe werkt het?</h2>
+            <p style="margin: 0 5% 0 5%;">Als je een lingo package koopt heb je gegarandeert een small-bar (naast de deluxe package). Je speelt dan ons lingo spel en mocht je dat winnen ga je van small naar medium en van medium naar large (het spel wordt steeds moeilijker).
+                Je ruilt makkelijk gezegd je bar steeds om naar een grotere maat. Dit is alleen in een lingo package!
+            </p>
+        </section>
+        <section class="hidden" id="contactInfo">
+            <h1>Contact</h1>
+            <p>Yanick: ydklerk@melanchthon.nl</p>
+            <p>Cas: cblokhuijsen@melanchthon.nl</p>
+            <p>Ference: ffontijn@melanchthon.nl</p>
+        </section>
+        <section class="hidden">
+            <h1>Gegevens</h1>
+            <p>6 Maart</p>
+            <p>Myra Wardsingel 50, 2652 LA Berkel en Rodenrijs</p>
+            <iframe id=”kaart” src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2457.3278411371493!2d4.446745476986343!3d51.98267797587173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5cb93ebfcc747%3A0x9056574602152f1!2sMelanchthon%20Berkroden!5e0!3m2!1snl!2snl!4v1709393526469!5m2!1snl!2snl"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <footer class="footer" style="margin-left: -5%;">
+            <p>&copy;2024 Chocolingo | Alle rechten voorbehouden</p>
+            <button onclick="showWebsite()">Ga terug</button>
+        </footer>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </section>    
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChocoLingo - Demo</title>
+  <link rel="stylesheet" href="stylelingo.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+  <script defer src="lingoe.js"></script>
+</head>
+<body>
+  <div id='msgBox'>ChocoLingo</div>
+  <div id="smallMsg">Groen = Goede letter, Goed Geplaatst</div>
+  <div id="smallMsg">Geel = Goede letter, Verkeerd Geplaatst</div>
+  <div id="smallMsg">Rood = Foute letter, Niet in het woord</div>
+  <div id="container">
+    <div id="row1">
+      <div class="square default"></div>
+      <div class="square default"></div>
+      <div class="square default"></div>
+      <div class="square default"></div>
+      <div class="square default"></div>
+    </div>
+    <div id="row2">
+      <div class="square default"></div>
+      <div class="square default"></div>
+      <div class="square default"></div>
+      <div class="square default"></div>
+      <div class="square default"></div>
+    </div>
+    <div id="row3">
+      <div class="square default"></div>
+      <div class="square default"></div>
+      <div class="square default"></div>
+      <div class="square default"></div>
+      <div class="square default"></div>
+    </div>
+    <div id="row4">
+      <div class="square default"></div>
+      <div class="square default"></div>
+      <div class="square default"></div>
+      <div class="square default"></div>
+      <div class="square default"></div>
+    </div>
+    <div id="row5">
+      <div class="square default"></div>
+      <div class="square default"></div>
+      <div class="square default"></div>
+      <div class="square default"></div>
+      <div class="square default"></div>
+    </div>
+  </div>
+  <input id="guess" onkeypress="submitguess(this)" placeholder='Typ een woord!'>
+  <button id="button" class="invisible">Wacht op een medewerker...</button>
+</body>

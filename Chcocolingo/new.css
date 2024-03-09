@@ -1,0 +1,140 @@
+body {
+    background-color: hsla(0, 0%, 100%, 1);
+    background-image: radial-gradient(at 80% -40%, hsla(1, 100%, 56%, 1) 0px, transparent 50%), radial-gradient(at 0% 0%, hsla(342, 0%, 100%, 1) 0px, transparent 50%);
+    margin-left: 7%;
+    overflow-x: hidden;
+    background-color: whitesmoke;
+    color: #131316;
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: radial-gradient(at 80% -40%, hsla(1, 100%, 56%, 1) 0px, transparent 50%), radial-gradient(at 0% 0%, hsla(342, 0%, 100%, 1) 0px, transparent 50%);
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 0%;
+}
+
+h2 {
+    margin-left: 10%;
+    font-size: 35px;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 50vh;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.knopScroll {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(-100%);
+    transition: all 1s !important;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: transparent 0 0 0 3px, rgba(18, 18, 18, .1) 0 6px 20px;
+    box-sizing: border-box;
+    color: #121212;
+    cursor: pointer;
+    display: inline-flex;
+    flex: 1 1 auto;
+    font-family: Inter, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1;
+    margin: 0;
+    outline: none;
+    padding: 1rem 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s, -webkit-box-shadow .2s;
+    white-space: nowrap;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.knopScroll:hover {
+    box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+p {
+    margin-left: 10%;
+    font-size: 15px;
+    margin-right: 10%;
+}
+
+.shape {
+    color: black;
+    height: 100px;
+    width: 100px;
+    border-radius: 55% 45% 70% 30% / 30% 30% 70% 70%;
+}
+
+#prijs {
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-image: none;
+        overflow-x: hidden;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    h1,
+    h2,
+    p,
+    #prijs,
+    .knopScroll {
+        text-align: center;
+        margin-left: 0%;
+    }
+
+    #prijs {
+        font-size: 10px;
+    }
+
+    .knopScroll {
+        display: block;
+        margin: 0 auto;
+    }
+
+    #logoImage {
+        display: none;
+    }
+
+    #logoText {
+        display: inline-block;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        background-image: none;
+        overflow-x: hidden;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
