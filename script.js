@@ -116,9 +116,9 @@ function generateSchedule() {
     var scheduleElement = document.getElementById('workout');
     shuffleArray(selectedWorkouts);
 
-    var days = ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag', 'Zondag'];
+    var days = ['Monday', 'Tuesday, 'Wednesday, 'Thursday, 'Fridat', 'Saturday', 'Sunday'];
 
-    var schedule = "Training Schema:\n\n";
+    var schedule = "Training Schedule:\n\n";
     for (var i = 0; i < selectedWorkouts.length; i++) {
         schedule += days[i] + ": " + selectedWorkouts[i] + "\n";
     }
