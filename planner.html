@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -14,11 +14,11 @@
 </head>
 
 <body>
-    <p>Fitnesser by GlitchKittyy</p>
+    <p><a href="index.html" style="color: black; text-decoration: none;">Fitnesser by GlitchKittyy</a></p>
     <h1 style="line-height: 0%;">Planner</h1>
     <br><br>
     <section id="choice" class="hidden">
-        <button onclick="showGenerator()">Genereer een workout planning</button>
+        <button onclick="showGenerator()">Generate a workout plan</button>
         <br>
     </section>
 
@@ -28,28 +28,28 @@
         <h2>Workout Checklist</h2>
         <form id="workoutForm">
             <label class="custom-checkbox">
-                <input type="checkbox" name="workout" value="Armen"> Armen
+                <input type="checkbox" name="workout" value="Arms"> Arms
             </label>
             <label class="custom-checkbox">
-                <input type="checkbox" name="workout" value="Benen"> Benen
+                <input type="checkbox" name="workout" value="Legs"> Legs
             </label>
             <label class="custom-checkbox">
-                <input type="checkbox" name="workout" value="Schouders"> Schouders
+                <input type="checkbox" name="workout" value="Shoulders"> Shoulders
             </label>
             <label class="custom-checkbox">
-                <input type="checkbox" name="workout" value="Rug"> Rug
+                <input type="checkbox" name="workout" value="Back"> Back
             </label>
             <label class="custom-checkbox">
-                <input type="checkbox" name="workout" value="Buik"> Buik
+                <input type="checkbox" name="workout" value="Core"> Core
             </label>
             <label class="custom-checkbox">
-                <input type="checkbox" name="workout" value="Borst"> Borst
+                <input type="checkbox" name="workout" value="Chest"> Chest
             </label>
             <label class="custom-checkbox">
                 <input type="checkbox" name="workout" value="Full Body"> Full Body
             </label>
             <label class="custom-checkbox">
-                <input type="checkbox" name="workout" value="Onderlichaam"> Onderlichaam
+                <input type="checkbox" name="workout" value="Lower body"> Lower body
             </label>
             <label class="custom-checkbox">
                 <input type="checkbox" name="workout" value="Cardio"> Cardio
@@ -58,58 +58,24 @@
         </form>
         <br>
         <div id="savedWorkouts">
-            <button onclick="generateSchedule()">Genereer Schema</button>
+            <button onclick="generateSchedule()">Generate Schedule</button>
             <br>
         </div>
     </section>
     <section id="generator" style="display: none;">
-        <h2>Gegenereerd Schema</h2>
+        <h2>Generated schedule</h2>
         <p id="workout"></p>
         <p>Fitnesser - GlitchKittyy</p>
     </section>
     <br>
     <div class="downloader">
         <button style="display: none;"id="download" onclick="capture()">Download as .JPEG</button>
-        <!--<div class="dropdown">
-            <button class="dropdown-btn">Developer Options</button>
-            <div class="dropdown-content">
-                <label class="custom-checkbox">
-                    <input type="checkbox" name="developer1" id="developer1"> Dubbele Resultaten
-                </label>
-            </div>-->
-            <!--
-            <label class="custom-checkbox">
-                <input type="checkbox" name="developerRestDays" id="developerRestDays"> Custom Rest Days
-            </label>
-            <div id="customRestDays" style="display: none;">
-                <p>Select Custom Rest Days:</p>
-                <label class="custom-checkbox">
-                    <input type="checkbox" name="restDay" value="Maandag"> Maandag
-                </label>
-                <label class="custom-checkbox">
-                    <input type="checkbox" name="restDay" value="Dinsdag"> Dinsdag
-                </label>
-                <label class="custom-checkbox">
-                    <input type="checkbox" name="restDay" value="Woensdag"> Woensdag
-                </label>
-                <label class="custom-checkbox">
-                    <input type="checkbox" name="restDay" value="Donderdag"> Donderdag
-                </label>
-                <label class="custom-checkbox">
-                    <input type="checkbox" name="restDay" value="Vrijdag"> Vrijdag
-                </label>
-                <label class="custom-checkbox">
-                    <input type="checkbox" name="restDay" value="Zaterdag"> Zaterdag
-                </label>
-                <label class="custom-checkbox">
-                    <input type="checkbox" name="restDay" value="Zondag"> Zondag
-                </label>
-            </div>
-
-        </div>-->
+        <br><br>
+        <p id="meer" style="display: none">Want to customise rest-days?</p>
+        <button id="meerKnop"style="display: none;" onclick="window.location.href = 'helaas.html'">Click here!</button>
     </div>
-    <br>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    
 </body>
-<br><br><br><br><br><br>
 
 </html>
