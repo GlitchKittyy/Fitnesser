@@ -1,6 +1,9 @@
 var selectedWorkouts = [];
 let randomiser = false;
 
+var meerOpties = document.getElementById('meer');
+var meerKnop = document.getElementById('meerKnop');
+
 document.addEventListener('DOMContentLoaded', function () {
     var form = document.getElementById('workoutForm');
     var checkboxes = form.elements['workout'];
@@ -9,8 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
         checkboxes[i].addEventListener('change', updateWorkouts);
     }
 
-    var developer1Checkbox = form.elements['developer1'];
-    developer1Checkbox.addEventListener('change', toggleRandomiser);
 
     updateWorkouts();
 
@@ -18,9 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     generateButton.addEventListener('click', showGenerator);
 });
 
-function toggleRandomiser() {
-    randomiser = !randomiser;
-}
+
 
 function showGenerator() {
     var generatorElement = document.getElementById('generator');
@@ -46,19 +45,9 @@ function showGenerator() {
         return checkbox.value;
     });
 
-    var customRestDaysSection = document.getElementById('customRestDaysSection');
-    if (document.getElementById('developerRestDays').checked) {
-        customRestDaysSection.style.display = 'grid';
-        var customRestDaysCheckboxes = document.getElementsByName('restDay');
-        customRestDays = Array.from(customRestDaysCheckboxes)
-            .filter(checkbox => checkbox.checked)
-            .map(checkbox => checkbox.value);
 
-        fillRemainingDaysWithCustomRest();
-    } else {
-        customRestDaysSection.style.display = 'none';
-        fillRemainingDaysWithRest();
-    }
+    fillRemainingDaysWithRest();
+
 
     displaySavedWorkouts();
 }
@@ -100,7 +89,7 @@ function fillRemainingDaysWithRest() {
 
     if (!randomiser) {
         for (var i = 0; i < remainingDays; i++) {
-            selectedWorkouts.push('Rustdag');
+            selectedWorkouts.push('Restday');
         }
     } else {
         var randomWorkouts = selectedWorkouts.slice();
@@ -110,10 +99,6 @@ function fillRemainingDaysWithRest() {
         selectedWorkouts = randomWorkouts.slice(0, 7);
     }
 }
-
-
-
-
 
 function displaySavedWorkouts() {
     var savedWorkoutsList = document.getElementById('savedWorkoutsList');
@@ -145,6 +130,14 @@ function generateSchedule() {
     downloadElement.style.display = "grid";
     generatorElement.classList.add('fade-in');
     document.getElementById("generator").scrollIntoView({ behavior: "smooth" });
+    setTimeout(function(){
+        meerOpties.style.display = "grid";
+        meerOpties.classList.add('fade-in');
+    }, 2500);
+    setTimeout(function(){
+        meerKnop.style.display = "grid";
+        meerKnop.classList.add('fade-in');
+    }, 3000);
 
 }
 
@@ -211,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (checkedCount > maxCheckboxes) {
-            checkboxLimitMessage.textContent = 'Maximaal 7 secties kunnen worden aangevinkt.';
+            checkboxLimitMessage.textContent = 'Maximaal 7 secties per schema';
             this.checked = false;
         } else {
             checkboxLimitMessage.textContent = '';
@@ -233,3 +226,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 });
+function showVersion(){
+    var versions = document.getElementById('versions');
+    versions.style.display = "grid";
+    document.getElementById("versions").scrollIntoView({ behavior: "smooth" });
+    
+}
