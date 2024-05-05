@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,9 +27,44 @@
             </button>
         </div>
     </section>
-    <p class="hidden">Selecteer een van bovenstaande opties</p>
-    <p>NOTE! DEZE WEBSITE IS NOG IN ONTWIKKELING EN BEPAALDE FUNCTIES ONTBREKEN!</p>
+    <p class="hidden">Select one of the options above</p>
     <br><br><br><br><br><br><br>
-    <a href="https://github.com/GlitchKittyy/" target="_blank">GlitchKittyy</a>
+
+        
+        <div style="display: flex; justify-content: center;"><li class="social-icon__item"><a class="social-icon__link" href="https://github.com/GlitchKittyy/">
+            <ion-icon name="logo-github"></ion-icon>
+        </a></li></div>
+
+        <p onclick="showVersion()" style="text-align: left;font-size: small;">Version: v1.1</p>
+        <section id="versions" style="display:none; margin-left: 5%; margin-right: 2%;">
+            <section>
+                <h2>Latest: v1.1</h2>
+                <ul>
+                    <li><a href="converter.html">Added Unit Converter</a></li>
+                    <li>Added Version logs</li>
+                    <li>Translated site from NL > EN</li>
+                </ul>
+                <h3>Known bugs (working on fix):</h3>
+                <ul>
+                    <li>Undefined workout schedule when nothing is entered</li>
+                    <li>Problems with entering numbers in <a href="converter.html">Unit Converter</a></li>
+                </ul>
+            </section>
+            <br><hr style="margin: 0 25% 0 25%;"><br>
+            <section>
+                <h2>v1.0</h2>
+                <ul>
+                    <li>Launched Fitnesser</li>
+                    <ul style="list-style: disc;">
+                        <li>Added <a href="planner.html">Workout Planner</a></li>
+                    </ul>
+                </ul>
+            </section>
+            <br><hr style="margin: 0 25% 0 25%;"><br>
+        </section>
+
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
 </body>
 </html>
