@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="styleConverter.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <script defer src="scriptConverter.js"></script>
+    <link rel="icon" href="img/logo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+
+</head>
+<body>
+    
+    <p><a href="index.html" style="color: black; text-decoration: none;">Fitnesser by GlitchKittyy</a></p>
+    <h1 style="line-height: 0%;">Converter</h1>
+    <br><br>
+    <button onclick="live()">Live converter</button>
+    <br>
+    <p>Live converter can be used when you need to switch from KG to LBS or LBS to KG quickly</p>
+    <br>
+    <button disabled style="background-color: #e8e8e8;"onclick="list()">List converter</button>
+    <br>
+    <p>List converter can be used if you want a list from KG to LBS or LBS to KG in one go</p>
+    <br><br>
+    <section id="liveConverter" style="display: none;">
+        <h2>Weight Converter</h2>
+
+        <label for="kgInput">Enter weight KG in: </label>
+        <input type="number" id="kgInput" oninput="updateWeight('kg')" placeholder="Enter weight in KG">
+
+        <p>OR</p>
+
+        <label for="lbsInput">Enter weight in LBS in:</label>
+        <input type="number" id="lbsInput" oninput="updateWeight('lbs')" placeholder="Enter weight in LBS">
+
+        <p id="result"></p>
+    </section>
+    <section id="listConverter" style="display: none;">
+        
+    </section>
+    <br><br>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+</body>
+</html>
