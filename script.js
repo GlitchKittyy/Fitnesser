@@ -62,6 +62,7 @@ function updateWorkouts() {
         }
     }
 
+
     if (checkedCount > maxCheckboxes) {
         checkboxLimitMessage.textContent = 'Max is 7';
         this.checked = false;
@@ -227,8 +228,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 function showVersion(){
-    var versions = document.getElementById('versions');
-    versions.style.display = "grid";
-    document.getElementById("versions").scrollIntoView({ behavior: "smooth" });
-    
+    var versions = document.getElementById('versions');versions.style.display = "grid";document.getElementById("versions").scrollIntoView({ behavior: "smooth" });
 }
+
