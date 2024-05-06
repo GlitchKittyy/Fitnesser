@@ -116,7 +116,7 @@ function generateSchedule() {
     var scheduleElement = document.getElementById('workout');
     shuffleArray(selectedWorkouts);
 
-    var days = ['Monday', 'Tuesday, 'Wednesday, 'Thursday, 'Fridat', 'Saturday', 'Sunday'];
+    var days = ['Monday', 'Tuesday, 'Wednesday', 'Thursday, 'Friday', 'Saturday', 'Sunday'];
 
     var schedule = "Training Schedule:\n\n";
     for (var i = 0; i < selectedWorkouts.length; i++) {
@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (checkedCount > maxCheckboxes) {
-            checkboxLimitMessage.textContent = 'Maximaal 7 secties per schema';
+            checkboxLimitMessage.textContent = 'Max 7 selections';
             this.checked = false;
         } else {
             checkboxLimitMessage.textContent = '';
