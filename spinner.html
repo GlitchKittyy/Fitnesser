@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitnesser - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <meta name="title" content="Fitnesser - GlitchKittyy">
+    <meta name="description" content="THE reason you get to your fitness goals">
+    <script defer src="scriptSpinner.js"></script>
+    <link rel="icon" href="img/logo.png">
+    <style>
+        /* Additional CSS for mobile optimization */
+        @media only screen and (max-width: 768px) {
+            .range-scale {
+                flex-direction: column;
+                align-items: center;
+            }
+            .range {
+                margin-bottom: 10px;
+            }
+            #arrow {
+                display: none;
+            }
+            #parent {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p><a href="index.html" style="color: black; text-decoration: none;">Fitnesser by GlitchKittyy</a></p>
+    <h1 style="line-height: 0%;">Workout selector</h1>
+    <hr style="margin: 0 25% 0 25%;">
+    <h3 style="text-align: center;">DEVBUILD</h3>
+    <p style="font-weight: bold;">WHAT IS SHOWN IS SUBJECT TO CHANGE</p>
+    <hr style="margin: 0 25% 0 25%;">
+    <section class="select">
+        <br>
+        <button class="select-button hidden" id="spin">
+            <img src="img/spinner.png" alt="Weights Icon">
+            Spin the scale
+        </button>
+        <br><br><br>
+
+        <div id="parent">
+            <div class="range-scale">
+                <div style="transition-delay: 100ms;"class="range hidden">Arms</div>
+                <div style="transition-delay: 150ms;"class="range hidden">Legs</div>
+                <div style="transition-delay: 200ms;"class="range hidden">Shoulders</div>
+                <div style="transition-delay: 250ms;"class="range hidden">Chest</div>
+                <div style="transition-delay: 300ms;"class="range hidden">Cardio</div>
+                <div style="transition-delay: 350ms;"class="range hidden">Core</div>
+                <div style="transition-delay: 400ms;"class="range hidden">Glutes</div>
+                <div style="transition-delay: 450ms;"class="range hidden">Back</div>
+                <div style="transition-delay: 500ms;"class="range hidden">Full Body</div>
+            </div>
+            <div id="arrow">|</div>
+            <br>
+            <p id="resultText"></p>
+            <p style="display: none;"id="spinner"></p>
+        </div>
+        <br><br>
+        <section">
+            <h3>FAQ</h3>
+            <p style="text-align: left;">Q: The arrow is pointing at Arms but yet it says Legs</p>
+            <br>
+            <p style="text-align: left;">A: That is because this system uses RNG (Random number generation) and since all the names arent the same size in width you may sit 1/2 numbers away from precicion. Check out the advanced tools.</p>
+            <br><hr style="margin: 0 25% 0 25%;"><br>
+            <p style="text-align: left;">Q: Why is the text so small/clammed?</p>
+            <br>
+            <p style="text-align: left;">A: Its because of the device you are using Fitnesser on.</p>
+        </section>
+        <br>
+        <button onclick="advanced()" class="select-button" id="advancedR">Show advanced</button>
+        
+
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </section>
+</body>
+</html>
