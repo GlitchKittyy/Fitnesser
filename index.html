@@ -12,21 +12,29 @@
     <link rel="icon" href="img/logo.png">
 </head>
 <body>
+    <h1 class="hidden">Fitnesser</h1>
     <section class="select">
-        <h1 class="hidden">Fitnesser</h1>
-        <div class="hidden">
+        <div class="hidden bounce">
+            <button class="select-button" id="buttons" onclick="window.location.href = 'converter.html';">
+                <img src="img/weightplate_icon.png" alt="Weights Icon" >
+                Unit Converter
+            </button>
+        </div>
+        <br>
+        <div class="hidden bounce">
             <button class="select-button" id="buttons" onclick="window.location.href = 'planner.html';">
                 <img src="img/dumbell_icon.png">
                 Workout Planner
             </button>
         </div>
         <br>
-        <div class="hidden">
-            <button class="select-button" id="buttons" onclick="window.location.href = 'converter.html';">
-                <img src="img/weightplate_icon.png" alt="Weights Icon">
-                Unit Converter
+        <div class="hidden bounce">
+            <button class="select-button" id="buttons" onclick="window.location.href = 'spinner.html';">
+                <img src="img/spinner.png" alt="Spinner Icon">
+                Workout Selector
             </button>
         </div>
+        <br>
     </section>
     <p class="hidden">Select one of the options above</p>
     <br><br><br><br><br><br><br>
@@ -36,19 +44,31 @@
             <ion-icon name="logo-github"></ion-icon>
         </a></li></div>
 
-        <p onclick="showVersion()" style="text-align: left;font-size: small;">Version: v1.1</p>
+        <p onclick="showVersion()" style="text-align: left;font-size: small;">Version: v2.0 (DEVBUILD)</p>
         <section id="versions" style="display:none; margin-left: 5%; margin-right: 2%;">
             <section>
-                <h2>Latest: v1.1</h2>
+                <h2>Latest: v2.0 (DEVBUILD)</h2>
+                <ul>
+                    <li>Added <a href="spinner.html">Workout Selector</a></li>
+                    <li>Changes to the UI</li>
+                </ul>
+                <h3>Known issues (working on fix):</h3>
+                <ul>
+                    <li>Animations not working</li>
+                    <h4>Already known issues:</h4>
+                    <li>Workout selector too small / not good mobile optimised</li>
+                    <p>NOTE: Working on a better mobile version</p>
+                    <li>Undefined workout schedule when nothing is entered</li>
+                    <li>Problems with entering numbers in <a href="converter.html">Unit Converter</a></li>
+                </ul>
+            </section>
+            <br><hr style="margin: 0 25% 0 25%;"><br>
+            <section>
+                <h2>v1.1</h2>
                 <ul>
                     <li><a href="converter.html">Added Unit Converter</a></li>
                     <li>Added Version logs</li>
                     <li>Translated site from NL > EN</li>
-                </ul>
-                <h3>Known bugs (working on fix):</h3>
-                <ul>
-                    <li>Undefined workout schedule when nothing is entered</li>
-                    <li>Problems with entering numbers in <a href="converter.html">Unit Converter</a></li>
                 </ul>
             </section>
             <br><hr style="margin: 0 25% 0 25%;"><br>
@@ -62,6 +82,9 @@
                 </ul>
             </section>
             <br><hr style="margin: 0 25% 0 25%;"><br>
+            <p onclick="document.getElementById('secret').style.display = 'grid'; scrollIntoView({behavior: 'smooth'})">Made in HTML | CSS | JS</p>
+            <p>By GlitchKittyy</p>
+            <p style="display: none;" id="secret">Planning on React + Tailwind 🫣</p>
         </section>
 
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
