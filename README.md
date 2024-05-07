@@ -17,3 +17,5 @@ You don't have to, but its handy
 
 ### Where can I check it out???
 ## https://glitchkittyy.github.io/Fitnesser/
+
+# v2.1 coming later May
