@@ -15,7 +15,7 @@ I (GlitchKittyy) started developing Fitnesser for my own purpose to make my fitn
 ## Why Fitnesser?
 You don't have to, but its handy
 
-### Where can I check it out???
-## https://glitchkittyy.github.io/Fitnesser/
+## Where can I check it out???
+[Here](https://glitchkittyy.github.io/Fitnesser/)
 
-# v2.1 coming later May
+v2.1 coming later May
