@@ -1,25 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylePlanner.css">
+    <link rel="stylesheet" href="css-files/stylePlanner.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
     <script defer src="script.js"></script>
-    <title>Fitnesser - Planner</title>
+    <title>Fitnesser</title>
     <link rel="icon" href="img/logo.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
 
 </head>
 
+<script>
+    animations = false
+</script>
+
 <body>
     <p><a href="index.html" style="color: black; text-decoration: none;">Fitnesser by GlitchKittyy</a></p>
-    <h1 style="line-height: 0%;">Planner</h1>
+    <h1 id="VERANDER" style="line-height: 0%;">Workout Tools</h1>
     <br><br>
     <section id="choice" class="hidden">
-        <button onclick="showGenerator()">Generate a workout plan</button>
+        <button onclick="showGenerator()">
+            <img src="img/dumbell_icon.png" alt="dumbell">
+            Schedule Generator
+        </button>
         <br>
+        <button onclick="naar()">
+            <img src="img/spinner.png" alt="dumbell">
+            Workout Selector 
+        </button>
     </section>
 
     
@@ -49,7 +60,7 @@
                 <input type="checkbox" name="workout" value="Full Body"> Full Body
             </label>
             <label class="custom-checkbox">
-                <input type="checkbox" name="workout" value="Lower body"> Lower body
+                <input type="checkbox" name="workout" value="Glutes"> Glutes
             </label>
             <label class="custom-checkbox">
                 <input type="checkbox" name="workout" value="Cardio"> Cardio
