@@ -18,4 +18,4 @@ You don't have to, but its handy
 ## Where can I check it out???
 [Here](https://glitchkittyy.github.io/Fitnesser/)
 
-v2.1 coming later May
+v3.1 coming in June
