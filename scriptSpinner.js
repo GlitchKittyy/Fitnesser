@@ -22,7 +22,6 @@ let clicked = 0;
 let results;
 var result = document.getElementById('resultText');
 function checkWorkout(){
-    // lang gedeelte
     if(random <= 11) { results = options[0]; }
     else if(random >= 12 && random <= 22) { results = options[1]; }
     else if(random >= 23 && random <= 33) { results = options[2]; }
@@ -64,7 +63,7 @@ function moveArrow() {
     else{
         arrow.style.display = "flex";
         setTimeout(function(){
-            random = Math.floor(Math.random() * 100) + 1;
+            random = Math.floor(Math.random()*100) + 1
             arrow.style.left = random + "%";
             spinner.textContent = random;
             checkWorkout();
@@ -82,3 +81,13 @@ function advanced() {
     button_advanced.style.display = "none";
     spinner.style.display = "grid";
 }
+
+var body = document.getElementById('heelding');
+
+function load(){
+    setTimeout(function () {
+        body.classList.add('fade-in');
+        body.style.display = "grid";
+    }, 600);
+}
+load();
