@@ -27,6 +27,17 @@ var choiceElement = document.getElementById('choice');
 var checklistElement = document.getElementById('checklist');
 var verander = document.getElementById('VERANDER');
 
+function naar(){
+    choiceElement.classList.add('fade-out');
+
+    setTimeout(function () {
+        choiceElement.style.display = "none";
+    }, 500);
+    setTimeout(function () {
+    window.location.href = 'spinner.html';
+    }, 500)
+};
+
 function showGenerator() {
     choiceElement.classList.add('fade-out');
 
@@ -236,13 +247,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-function naar(){
-    choiceElement.classList.add('fade-out');
-
-    setTimeout(function () {
-        choiceElement.style.display = "none";
-    }, 500);
-    setTimeout(function () {
-    window.location.href = 'spinner.html';
-    }, 500)
-}
