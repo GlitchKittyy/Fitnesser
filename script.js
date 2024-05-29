@@ -1,8 +1,10 @@
+
 var selectedWorkouts = [];
 let randomiser = false;
 
 var meerOpties = document.getElementById('meer');
 var meerKnop = document.getElementById('meerKnop');
+
 
 document.addEventListener('DOMContentLoaded', function () {
     var form = document.getElementById('workoutForm');
@@ -20,11 +22,12 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+var generatorElement = document.getElementById('generator');
+var choiceElement = document.getElementById('choice');
+var checklistElement = document.getElementById('checklist');
+var verander = document.getElementById('VERANDER');
 
 function showGenerator() {
-    var generatorElement = document.getElementById('generator');
-    var choiceElement = document.getElementById('choice');
-    var checklistElement = document.getElementById('checklist');
     choiceElement.classList.add('fade-out');
 
     setTimeout(function () {
@@ -35,6 +38,7 @@ function showGenerator() {
 
     setTimeout(function () {
         checklistElement.classList.add('fade-in');
+        verander.innerHTML = "Planner"
         checklistElement.style.display = "grid";
     }, 500);
 
@@ -161,6 +165,10 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('show');
         }
+        else{
+            entry.target.classList.remove('show');
+        }
+    
     });
 });
 
@@ -227,7 +235,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 });
-function showVersion(){
-    var versions = document.getElementById('versions');versions.style.display = "grid";document.getElementById("versions").scrollIntoView({ behavior: "smooth" });
-}
 
+function naar(){
+    choiceElement.classList.add('fade-out');
+
+    setTimeout(function () {
+        choiceElement.style.display = "none";
+    }, 500);
+    setTimeout(function () {
+    window.location.href = 'spinner.html';
+    }, 500)
+}
