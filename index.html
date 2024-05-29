@@ -1,69 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitnesser - Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css-files/style.css">
+    <link rel="stylesheet" href="css-files/style2.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
     <meta name="title" content="Fitnesser - GlitchKittyy">
     <meta name="description" content="THE reason you get to your fitness goals">
     <script defer src="script.js"></script>
+    <script defer src="script2.js"></script>
     <link rel="icon" href="img/logo.png">
 </head>
+
 <body>
-    <h1 class="hidden">Fitnesser</h1>
-    <section class="select">
-        <div class="hidden bounce">
-            <button class="select-button" id="buttons" onclick="window.location.href = 'converter.html';">
-                <img src="img/weightplate_icon.png" alt="Weights Icon" >
-                Unit Converter
-            </button>
-        </div>
-        <br>
-        <div class="hidden bounce">
-            <button class="select-button" id="buttons" onclick="window.location.href = 'planner.html';">
-                <img src="img/dumbell_icon.png">
-                Workout Planner
-            </button>
-        </div>
-        <br>
-        <div class="hidden bounce">
-            <button class="select-button" id="buttons" onclick="window.location.href = 'spinner.html';">
-                <img src="img/spinner.png" alt="Spinner Icon">
-                Workout Selector
-            </button>
+    <br>
+    <header>
+        <p onclick="header()" id="banner" class="header">Loading banner..</p>
+    </header>
+    <br>
+    <div class="title">
+        <img src="img/logo.png" alt="Fitnesser logo" style="width: 100px; transition-delay: 100ms;"
+            class="logo-naam hidden">
+        <h1 class="hidden">Fitnesser</h1>
+
+    </div>
+    <p class="hidden" style="margin: 0 10%;">Welcome to Fitnesser,</p>
+    <br>
+    <p class="hidden" style="margin: 0 10%;">Fitnesser is your ultimate fitness tool to help you achieve your fitness
+        goals easily and effectively.</p>
+    <p class="hidden" style="margin: 0 10%;">Get started with Fitnesser now and simplify your fitness routine!</p>
+    <br>
+    <section style="transition-delay: 0ms;width: 100%;" class="menu">
+        <div class="kiezen" >
+            <div class="hidden bounce">
+                <button class="select-button" id="buttons" onclick="window.location.href = 'converter.html';">
+                    <img src="img/weightplate_icon.png" alt="Weights Icon">
+                    Unit Converter
+                </button>
+            </div>
+            <br>
+            <div class="hidden bounce" style="transition-delay: 200ms;">
+                <button class="select-button" id="buttons" onclick="window.location.href = 'planner.html';">
+                    <img src="img/dumbell_icon.png">
+                    Workout Tools
+                </button>
+            </div>
         </div>
         <br>
     </section>
-    <p class="hidden">Select one of the options above</p>
+    <div style="display:flex;justify-content:center;width: 100%;">
+        <button onclick='document.getElementById("versions").scrollIntoView({ behavior: "smooth" });'class="select-button hidden" style="padding: 2.5vh;">Changelog</button>
+    </div>
+    <br><br><br>
+    <!--<section>
+        <h2 class="hidden" style="text-align: center;">About</h2>
+        <p class="hidden" style="transition-delay: 100ms;">- hier komt tekst -</p>
+    </section> -->
+    <section style="text-align: center; margin: 0 5% 0 5%;">
+        <h2 class="hidden">FAQ</h2>
+        <br>
+        <p class="hidden">Q: What is fitnesser's purpose?</p>
+        <p class="hidden">A: Fitnesser was made to make simple fitness tasks even simpler, Like making a week training
+            schedule, all to save you time.</p>
+        <br>
+        <hr class="hidden" style="margin: 0 25% 0 25%; transition-delay: 200ms; opacity: 10%;"><br>
+        <p class="hidden">Q: Why doesn't my made schedules save?</p>
+        <p class="hidden">A: Fitnesser is Client-based, That means that generated results is only at your device and so
+            it does not save. After you generated your schedule you can choose to download your schedule as a image.</p>
+        <br><br>
+    </section>
+    <section style="text-align: center;" class="hidden">
+        <h2>Reviews</h2>
+        <div class="container">
+            <div class="review">
+                <p class="rating">⭐ 4.5</p>
+                <p class="comment">"Very good and I have used it in many occasions"</p>
+                <li class="commenter">*</li>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="review">
+                <p class="rating">⭐ 4.2</p>
+                <p class="comment">"A simple yet useful tool!"</p>
+                <li class="commenter">*</li>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="review">
+                <p class="rating">⭐ 3.9</p>
+                <p class="comment">"For a simple project its actually great!"</p>
+                <li class="commenter">*</li>
+            </div>
+        </div>
+    </section>
     <br><br><br><br><br><br>
 
-        
-        <div style="display: flex; justify-content: center;"><li class="social-icon__item"><a class="social-icon__link" href="https://github.com/GlitchKittyy/">
-            <ion-icon name="logo-github"></ion-icon>
-        </a></li></div>
 
-        <p onclick="showVersion()" style="text-align: left;font-size: small;">Version: v2.0</p>
-        <section id="versions" style="display:none; margin-left: 5%; margin-right: 2%;">
+    <div style="display: flex; justify-content: center;">
+        <li class="social-icon__item"><a class="social-icon__link" href="https://github.com/GlitchKittyy/" target="_blank">
+                <ion-icon name="logo-github"></ion-icon>
+            </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="https://x.com/GlitchK_Yanick/" target="_blank">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </a></li>
+    </div>
+
+    <p id="version" style="text-align: left;font-size: small;">Version: v3.0 (DEVBUILD)</p>
+    <div class="versions">
+        <section id="versions" style="margin-left: 5%; margin-right: 2%;">
             <section>
-                <h2>Latest: v2.0</h2>
+                <h2>Latest: v3.0</h2>
                 <ul>
-                    <li>Added <a href="spinner.html">Workout Selector</a></li>
-                    <li>Changes to the UI</li>
+                    <li>A complete new look</li>
                 </ul>
                 <h3>Known issues (working on fix):</h3>
                 <ul>
-<li>Arrow on Workout selector not accurate enough</li>
                     <li>Workout selector too clammed / not good mobile optimised</li>
-                    <p>NOTE: Working on a better mobile version</p>
-                    <li>Animations not working</li>
+                    <li>Arrow on Workout selector not accurate enough</li>
+                    <p>NOTE: Will be fixed in the next update!</p>
+                    <li>Images not loading</li>
                     <h4>Already known issues:</h4>
+                    <li>Animations not working</li>
                     <li>Undefined workout schedule when nothing is entered</li>
                     <li>Problems with entering numbers in <a href="converter.html">Unit Converter</a></li>
                 </ul>
             </section>
-            <br><hr style="margin: 0 25% 0 25%;"><br>
+            <br>
+            <hr style="margin: 0 25% 0 25%;"><br>
+            <section>
+                <h2>v2.0</h2>
+                <ul>
+                    <li>Added <a href="spinner.html">Workout Selector</a></li>
+                    <li>Changes to the UI</li>
+                </ul>
+            </section>
+            <br>
+            <hr style="margin: 0 25% 0 25%;"><br>
             <section>
                 <h2>v1.1</h2>
                 <ul>
@@ -72,7 +149,8 @@
                     <li>Translated site from NL > EN</li>
                 </ul>
             </section>
-            <br><hr style="margin: 0 25% 0 25%;"><br>
+            <br>
+            <hr style="margin: 0 25% 0 25%;"><br>
             <section>
                 <h2>v1.0</h2>
                 <ul>
@@ -82,14 +160,18 @@
                     </ul>
                 </ul>
             </section>
-            <br><hr style="margin: 0 25% 0 25%;"><br>
-            <p onclick="document.getElementById('secret').style.display = 'grid'; scrollIntoView({behavior: 'smooth'})">Made in HTML | CSS | JS</p>
-            <p>By GlitchKittyy</p>
-            <p style="display: none;" id="secret">Planning on React + Tailwind 🫣</p>
+            <br>
+            <hr style="margin: 0 25% 0 25%;"><br>
+            <p onclick="document.getElementById('secret').style.display = 'grid'; scrollIntoView({behavior: 'smooth'})">
+                Made in HTML | CSS | JS</p>
+            <p>By GlitchKittyy &copy; <span id="year"></p>
+            <p style="display: none;" id="secret">Revamp coming soon..?</p>
         </section>
+    </div>
 
-      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
+
 </html>
