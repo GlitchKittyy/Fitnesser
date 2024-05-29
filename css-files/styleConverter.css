@@ -1,7 +1,6 @@
+
 html,
 body {
-    background-color: #fff !important;
-    color: #131316 !important;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -28,7 +27,6 @@ p{
     margin-left: 5%;
     margin-right: 5%
 }
-
 
 
 @keyframes fadeIn {
@@ -176,7 +174,3 @@ section{
   font-size: 1rem;
   font-weight: 300;
 }
-
-
-
-
