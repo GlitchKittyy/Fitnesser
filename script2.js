@@ -1,27 +1,33 @@
 let clicked = 0;
 var banner = document.getElementById("banner");
-let BANNER_TEXT = "V3.0 out now!"
+var versionID = document.getElementById("versionID");
+
+version = "V3.1"
+banner_text = [`${version} out now!`,`Fitnesser ${version}`]
+
+let BANNER_TEXT = banner_text[(Math.floor(Math.random() * banner_text.length))];
 
 window.onload = (event) => {
     banner.innerHTML = BANNER_TEXT;
+    versionID.textContent = version;
     document.getElementById('year').textContent = new Date().getFullYear();
 };
 
 function header(){
     if(clicked === 3){
-        banner.innerHTML = "Why did you click me?";
+        banner.innerHTML = "Don't Click Me";
     }
     else if (clicked === 6){
-        banner.innerHTML = "Stop it";
+        banner.innerHTML = "This is not a joke";
     }
     else if (clicked === 9){
-        banner.innerHTML = "Not funny";
+        banner.innerHTML = "Just stop";
     }
     else if (clicked === 12){
-        banner.innerHTML = "Im gonna go";
+        banner.innerHTML = "I'm just a Banner";
     }
     else if (clicked === 15){
-        banner.innerHTML = "Last chance!";
+        banner.innerHTML = "I'm gonna go";
     }
     else if (clicked === 18){
         banner.innerHTML = "Bye";
@@ -51,8 +57,22 @@ function header(){
         }
     }
     else if (clicked >= 80){
-        banner.style.backgroundColor = "#ff5e00";
-        banner.innerHTML = `Clicked: ${clicked}`;
+        if(clicked >= 100 && clicked <= 105){
+            banner.innerHTML = `SPOILER: Nothing comes after this`;
+        }
+        else if(clicked >= 115 && clicked <= 120){
+            banner.innerHTML = `Just use the service`;
+        }
+        else if(clicked >= 150){
+            banner.innerHTML = "R.I.P. Banner in 3 seconds";
+            setTimeout(function(){
+                banner.style.display = "none";
+            },3000)
+        }
+        else{
+            banner.style.backgroundColor = "#ff5e00";
+            banner.innerHTML = `Clicked: ${clicked}`;
+        }
     }
     
 
