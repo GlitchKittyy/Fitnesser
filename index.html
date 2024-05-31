@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitnesser - Home</title>
+    <title>Fitnesser</title>
     <link rel="stylesheet" href="css-files/style.css">
     <link rel="stylesheet" href="css-files/style2.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
     <meta name="title" content="Fitnesser - GlitchKittyy">
     <meta name="description" content="THE reason you get to your fitness goals">
+    <meta name="image" content="img/logo.png">
     <script defer src="script.js"></script>
     <script defer src="script2.js"></script>
     <link rel="icon" href="img/logo.png">
@@ -24,8 +25,8 @@
     <div class="title">
         <img src="img/logo.png" alt="Fitnesser logo" style="width: 100px; transition-delay: 100ms;"
             class="logo-naam hidden">
-        <h1 class="hidden">Fitnesser</h1>
-
+        <h1 class="hidden">Fitnesser<span style="opacity: 0;">.</span></h1>
+        <h3 class="hidden">| v3.1</h3>
     </div>
     <p class="hidden" style="margin: 0 10%;">Welcome to Fitnesser,</p>
     <br>
@@ -72,29 +73,22 @@
             it does not save. After you generated your schedule you can choose to download your schedule as a image.</p>
         <br><br>
     </section>
-    <section style="text-align: center;" class="hidden">
-        <h2>Reviews</h2>
-        <div class="container">
+    <section style="text-align: center;">
+        <h2 class="hidden">Reviews</h2>
+        <br>
+        <div class="container hidden">
             <div class="review">
                 <p class="rating">⭐ 4.5</p>
                 <p class="comment">"Very good and I have used it in many occasions"</p>
-                <li class="commenter">*</li>
+                <li class="commenter">Lucas</li>
             </div>
         </div>
         <br>
-        <div class="container">
+        <div class="container hidden">
             <div class="review">
                 <p class="rating">⭐ 4.2</p>
                 <p class="comment">"A simple yet useful tool!"</p>
-                <li class="commenter">*</li>
-            </div>
-        </div>
-        <br>
-        <div class="container">
-            <div class="review">
-                <p class="rating">⭐ 3.9</p>
-                <p class="comment">"For a simple project its actually great!"</p>
-                <li class="commenter">*</li>
+                <li class="commenter">Sam</li>
             </div>
         </div>
     </section>
@@ -110,24 +104,33 @@
             </a></li>
     </div>
 
-    <p id="version" style="text-align: left;font-size: small;">Version: v3.0 (DEVBUILD)</p>
+    <p id="version" style="text-align: left;font-size: small;">Version: <span id="versionID">loading...</span></p>
     <div class="versions">
         <section id="versions" style="margin-left: 5%; margin-right: 2%;">
             <section>
-                <h2>Latest: v3.0</h2>
+                <h2>Latest: v3.1</h2>
                 <ul>
-                    <li>A complete new look</li>
+                    <li>Minor bugfixes</li>
+                    <li>Arrow on <a href="spinner.html">Workout Selector</a> now 100% accurate</li>
+                    <li>Added better mobile support</li>
                 </ul>
                 <h3>Known issues (working on fix):</h3>
                 <ul>
                     <li>Workout selector too clammed / not good mobile optimised</li>
-                    <li>Arrow on Workout selector not accurate enough</li>
-                    <p>NOTE: Will be fixed in the next update!</p>
-                    <li>Images not loading</li>
-                    <h4>Already known issues:</h4>
-                    <li>Animations not working</li>
+                    <p>NOTE: Will be fixed in one of the next updates!</p>
                     <li>Undefined workout schedule when nothing is entered</li>
                     <li>Problems with entering numbers in <a href="converter.html">Unit Converter</a></li>
+                </ul>
+            </section>
+            <hr style="margin: 0 25% 0 25%;"><br>
+            <h2 style="text-align: center;">Previous updates</h2>
+            <br>
+            <section>
+                <h2>v3.0</h2>
+                <ul>
+                    <li>A complete new look</li>
+                    <li>New direction system</li>
+                    <li>Added Reviews & FAQ's</li>
                 </ul>
             </section>
             <br>
@@ -144,7 +147,7 @@
             <section>
                 <h2>v1.1</h2>
                 <ul>
-                    <li><a href="converter.html">Added Unit Converter</a></li>
+                    <li>Added <a href="converter.html">Unit Converter</a></li>
                     <li>Added Version logs</li>
                     <li>Translated site from NL > EN</li>
                 </ul>
@@ -154,10 +157,8 @@
             <section>
                 <h2>v1.0</h2>
                 <ul>
-                    <li>Launched Fitnesser</li>
-                    <ul style="list-style: disc;">
-                        <li>Added <a href="planner.html">Workout Planner</a></li>
-                    </ul>
+                    <li>Added <a href="planner.html">Workout Planner</a></li>
+                    <li>Launched Fitnesser</li>             
                 </ul>
             </section>
             <br>
@@ -165,7 +166,7 @@
             <p onclick="document.getElementById('secret').style.display = 'grid'; scrollIntoView({behavior: 'smooth'})">
                 Made in HTML | CSS | JS</p>
             <p>By GlitchKittyy &copy; <span id="year"></p>
-            <p style="display: none;" id="secret">Revamp coming soon..?</p>
+            <p style="display: none;" id="secret">v4.0 = Biggest one yet | HINT: new system</p>
         </section>
     </div>
 
