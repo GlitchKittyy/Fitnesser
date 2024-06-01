@@ -1,7 +1,7 @@
-# Fitnesser (v3.0)
+# Fitnesser (v3.1)
 A workout app to make your simple workout tasks even simpler
 ## Functions
-In v3.0 (latest):
+In v3.0+:
   -  Workout planner
       -  Makes a week schedule based on RNG
   -  Unit converter
