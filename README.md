@@ -18,4 +18,4 @@ You don't have to, but its handy
 ## Where can I check it out???
 [Here](https://glitchkittyy.github.io/Fitnesser/)
 
-v3.1 coming in June
+for the other programmers that noticed my commit history my git in terminal doesn't work
