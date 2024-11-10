@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="/scripts/script.js" defer></script>
+    <link rel="stylesheet" href="/styles/start.css" />
+    <title>Fitnesser</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo/logo2.png" />
+  </head>
+  <body>
+    <div class="page-header">
+      <div class="logo">
+        <img
+          onclick="window.location='home.html'"
+          draggable="false"
+          src="/images/logo/logo2.png"
+          alt=""
+        />
+      </div>
+      <div id="navigation-bar" class="nav-bar">
+        <a href="home.html">Home</a>
+        <a href="start.html">Tools</a>
+
+        <a
+          onclick="alert('For contant create a issue on the github page for Fitnesser')"
+          >Contact</a
+        >
+      </div>
+
+      <a id="menu-icon" class="menu-icon" onclick="onMenuClick()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <h1>Select a tool</h1>
+    <section>
+      <div class="selection">
+        <div class="select" onclick="window.location='generator.html'">
+          <img
+            src="/images/svg/schedule-svgrepo-com.svg"
+            style="height: 300px"
+          />
+          <div class="tool">
+            <h2>Schedule Generator</h2>
+            <p>Generate a schedule based on your preferences!</p>
+          </div>
+          <div class="select-overlay">Go to generator</div>
+        </div>
+        <div class="select" onclick="window.location='converter.html'">
+          <img
+            src="/images/svg/convertshape-2-svgrepo-com.svg"
+            style="height: 300px"
+          />
+          <div class="tool">
+            <h2>Unit Converter</h2>
+            <p>Easily convert <strong>KG</strong> and <strong>LBS</strong></p>
+          </div>
+          <div class="select-overlay">Go to converter</div>
+        </div>
+        <div class="select">
+          <div class="tool coming-soon">
+            <img
+              src="/images/svg/construction-tools-wrench-svgrepo-com.svg"
+              style="height: 300px"
+            />
+            <h2>More coming soon</h2>
+          </div>
+          <div class="select-overlay">Coming soon</div>
+        </div>
+      </div>
+    </section>
+    <div class="footer">
+      <div class="footer-section">
+        <h1>Fitnesser</h1>
+        <p>
+          Your ultimate fitness companion. Get personalized schedules, explore
+          workouts, and achieve your fitness goals with ease.
+        </p>
+      </div>
+      <div class="footer-section">
+        <h2>Quick Links</h2>
+        <ul>
+          <li>
+            <a
+              onclick="alert('For contant create a issue on the github page for Fitnesser')"
+              >Contact</a
+            >
+          </li>
+          <li><a href="TOS.html">Privacy Policy</a></li>
+          <li><a href="TOS.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h2>Follow Me</h2>
+        <div class="social-icons">
+          <a
+            translate="no"
+            href="https://github.com/GlitchKittyy"
+            target="_blank"
+            >Github</a
+          >
+          <a href="https://x.com/GlitchK_Yanick" target="_blank">Twitter</a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>
+          &copy; <span id="current-year"></span> Fitnesser. All rights reserved.
+          <a href="TOS.html">Privacy Policy</a> |
+          <a href="TOS.html">Terms of Service</a>
+        </p>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.getElementById("current-year").textContent =
+      new Date().getFullYear();
+  </script>
+</html>
